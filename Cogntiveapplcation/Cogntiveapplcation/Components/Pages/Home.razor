@@ -1,7 +1,82 @@
 ﻿@page "/"
+@using System.Collections.Generic
 
-<PageTitle>Home</PageTitle>
+<div class="container">
+    <header class="page-header">
+        <h1>Neruo-link</h1>
+        <p>With our help we can help you achive and successfull and enjoayble job within eEsports</p>
+    </header>
 
-<h1>Hello, world!</h1>
+    <div class="goals-grid">
+        <div class="goal-card">
+            <div class="goal-icon">🎯</div>
+            <h3>Our psycoligits</h3>
+            <p class="placeholder">Speak to our specilsits team to help you achive the best you can </p>
+        </div>
 
-Welcome to your new app.
+        <div class="goal-card">
+            <div class="goal-icon">📈</div>
+            <h3>Your pathway </h3>
+            <p class="placeholder">We are here to help you achive your best pathway</p>
+        </div>
+
+        <div class="goal-card">
+            <div class="goal-icon">⭐</div>
+            <h3>Backed reasheach</h3>
+            <p class="placeholder">Through the studys of FD and FI we will help you get emploment within esports</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div>
+        <div class="goal-actions">
+            <button class="button">Regiter an session today</button>
+            <button class="button2">Sign in</button>
+        </div>
+    </div>
+</div>
+<style>
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .page-header { text-align: center; margin-bottom: 40px; }
+    .page-header h1 { font-size: 2.5em; color: #333; margin: 0; }
+    .page-header p { color: #666; font-size: 1.1em; }
+    .goals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .goal-card { background: white; border-radius: 10px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .goal-icon { font-size: 3em; margin-bottom: 15px; }
+    .goal-card h3 { margin: 15px 0 10px; color: #333; }
+    .placeholder { color: #999; font-style: italic; }
+    .goal-actions { margin-top: 20px; }
+    .button { background: #007bff; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; }
+    .button:hover { background: #0056b3; }
+    .button { 
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        padding: px;
+        margin-left: 790px;
+        margin-top: 300px;
+    }
+    .button2 { 
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        padding: px;
+        margin-left: 10px;
+        margin-top: 300px;
+    }
+</style>
