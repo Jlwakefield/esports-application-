@@ -1,0 +1,33 @@
+@page "/Mainpage"
+@using System.Collections.Generic
+
+<PageTitle>Register Today </PageTitle>
+
+<div class = "main-view"   
+    <h1>Register an session today</h1>
+    <p>Fill in the form below to register an session with one of our specilists</p>
+
+    <label for "forname">First Name:</label>
+    <input type="text" id="forname" name="forname" placeholder="Enter your first name"/>
+
+
+    <label for "surname">Last Name:</label>
+    <input type="text" id="surname" name="surname" placeholder="Enter your last name"/>
+
+    <label for "email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address"/>
+
+    <label for "phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"/>
+
+
+    <label for "sessionType">Select Session Type:</label>
+    <select id="sessionType" name="sessionType">
+        <option value="initialConsultation">Initial Consultation</option>
+        <option value="followUp">Follow-up Session</option>
+        <option value="performanceCoaching">Performance Coaching</option>
+        <option value="mentalSkillsTraining">Mental Skills Training</option>
+    </select>
+
+    <button type="submit" class="submit-button" onclick="window.location.href='/Meetingpage'">Submit</button>
+</div>

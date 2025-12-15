@@ -1,0 +1,63 @@
+@page "/register"
+@rendermode InteractiveServer
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2>Sign Up</h2>
+            <EditForm Model="signupModel" OnValidSubmit="HandleSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <InputText id="email" class="form-control" @bind-Value="signupModel.Email" />
+                    <ValidationMessage For="() => signupModel.Email" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <InputText id="phone" class="form-control" @bind-Value="signupModel.PhoneNumber" />
+                    <ValidationMessage For="() => signupModel.PhoneNumber" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="meetingType" class="form-label">Type of Meeting</label>
+                    <InputSelect id="meetingType" class="form-control" @bind-Value="signupModel.MeetingType">
+                        <option value="">-- Select Meeting Type --</option>
+                        <option value="Virtual">Virtual</option>
+                        <option value="In-Person">In-Person</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </InputSelect>
+                    <ValidationMessage For="() => signupModel.MeetingType" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="date" class="form-label">Preferred Date</label>
+                    <InputDate id="date" class="form-control" @bind-Value="signupModel.PreferredDate" />
+                    <ValidationMessage For="() => signupModel.PreferredDate" />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private SignupModel signupModel = new();
+
+    private async Task HandleSubmit()
+    {
+        // Handle form submission
+        await Task.CompletedTask;
+    }
+
+    public class SignupModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string MeetingType { get; set; } = string.Empty;
+        public DateTime? PreferredDate { get; set; }
+    }
+}
